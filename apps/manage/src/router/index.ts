@@ -5,8 +5,29 @@ const router = createRouter({
   routes: [
     {
       path: "/",
-      name: "home",
+      name: "one",
       component: () => import("@/views/router1/RouterOne.vue"),
+      children: [
+        {
+          path: "two",
+          name: "two",
+          component: () => import("@/views/router1/RouterTwo.vue"),
+          children: [
+            {
+              path: "three",
+              name: "three",
+              component: () => import("@/views/router1/RouterThree.vue"),
+              children: [
+                {
+                  path: "four",
+                  name: "four",
+                  component: () => import("@/views/router1/RouterFour.vue"),
+                },
+              ],
+            },
+          ],
+        },
+      ],
     },
   ],
 });

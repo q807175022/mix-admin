@@ -9,7 +9,7 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    PageWrapper: typeof import('@/components/layout/PageWrapper.vue')['default']
+    PageWrapper: typeof import('./../src/components/layout/PageWrapper.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

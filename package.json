@@ -28,6 +28,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.35.3",
     "@custom/tsconfig": "workspace:*",
+    "@iconify/utils": "^2.1.4",
     "@rushstack/eslint-patch": "^1.1.4",
     "@types/jsdom": "^20.0.1",
     "@types/lodash-es": "^4.17.6",

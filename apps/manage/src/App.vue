@@ -1,4 +1,10 @@
 <script setup lang="ts">
+const height = computed(() => {
+  const windowHeight =
+    document.documentElement.clientHeight || document.body.clientHeight;
+
+  return windowHeight - 92;
+});
 </script>
 
 <template>
@@ -13,12 +19,13 @@
       />
     </div>
   </header>
-  <div>
-    <RouterView />
+
+  <div class="flex px-2 mt-4" :style="{ height: height + 'px' }">
+    <RouterView></RouterView>
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 header {
   height: 60px;
 

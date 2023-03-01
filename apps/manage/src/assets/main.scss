@@ -1,7 +1,8 @@
-@import './base.css';
+@import './base.scss';
 
 #app {
-  max-width: 1200px;
+  min-height: 100vh;
+  background-color: rgba(243, 244, 246, 1);
   margin: 0 auto;
   font-weight: normal;
 }
