@@ -5,9 +5,4 @@ module.exports = {
     'no-console': 'off',
     '@typescript-eslint/ban-ts-comment': 'off',
   },
-  settings: {
-    next: {
-      rootDir: ['apps/*/', 'packages/*/'],
-    },
-  },
 }

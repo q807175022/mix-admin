@@ -1,29 +1,34 @@
+<script setup lang="ts">
+const visible = ref(
+
+  false,
+
+)
+</script>
+
 <template>
   <PageWrapper>
-    <router-link to="/two"> 二级页面 </router-link>
-    <div>
-      测试文章段落测试文章段落测试文章段落测试文章段落测试文章段落测试文章段落测试文章段落测试文章段落测试文章段落测试文章段落测试文章段落测试文章段落测试文章段落测试文章段落测试文章段落测试文章段落测试文章段落
-    </div>
-    <button @click="visible = !visible">toggle</button>
+    <router-link to="/two">
+      二级页面
+    </router-link>
+    <div>test</div>
+    <button @click="visible = !visible">
+      toggle
+    </button>
     <transition>
-      <div class="w-10 h-10 bg-black" v-if="visible"></div>
+      <div v-if="visible" class="w-10 h-10 bg-black" />
     </transition>
   </PageWrapper>
   <RouterView>
     <template #default="{ Component }">
       <transition>
-        <component :is="Component" :key="1"></component>
+        <component :is="Component" :key="1" />
       </transition>
     </template>
   </RouterView>
 </template>
 
-<script setup lang="ts">
-const visible = ref(false);
-</script>
-
 <style lang="scss">
-
 .v-enter-active,
 .v-leave-active {
   transition: all 300ms ease;
